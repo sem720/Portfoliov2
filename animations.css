@@ -1,0 +1,114 @@
+/* Dom Element Fade in JS */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay About Me */
+
+
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #161618;
+  top: 100%; 
+  transition: top 0.5s ease-out; 
+  z-index: 100;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+.overlay.close {
+  top: 100%; 
+  overflow: hidden;
+}
+
+
+.overlay.open {
+  top: 0; 
+}
+
+
+@keyframes slideInFromBottom {
+  0% {
+      top: 100%;
+  }
+  100% {
+      top: 0;
+  }
+}
+
+.about-me-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 35%;
+  padding: 50px;
+}
+
+.about-me-information {
+  width: 65%;
+  padding: 0 50px;
+  padding-top: 10%;
+}
+
+.sideinfo {
+  margin-top: 150px;
+}
+
+.sideinfo-inner {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.experience {
+  margin-top: 100px;
+}
+
+.experience-inner {
+  margin: 30px;
+}
+
+.experience-inner h5 {
+  color: grey;
+}
+
+.contact {
+  margin-top: 100px;
+}
+
+.contact-inner {
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  gap: 20px;
+}
+
+.tech {
+  margin-top: 100px;
+}
+
+.tech-inner {
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  gap: 20px;
+}
+.margin-top {
+  margin-top: 30px;
+}
+
+.puffer {
+  height: 100px;
+}

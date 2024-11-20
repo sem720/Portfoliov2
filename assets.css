@@ -1,0 +1,299 @@
+/* Button Github Footer */
+
+.GithubButton {
+  margin-left: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.GithubButton img {
+  width: 50%;
+}
+.GithubButton:hover {
+  background-color: rgb(75, 75, 75);
+  overflow: visible;
+}
+
+.GithubButton:active {
+  transform: scale(0.98);
+}
+.tooltip {
+  --tooltip-color: rgb(41, 41, 41);
+  position: absolute;
+  top: -20px;
+  background-color: var(--tooltip-color);
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 8px 12px;
+  font-weight: 600;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+  min-width: 120px;
+}
+.tooltip::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  content: "";
+  background-color: var(--tooltip-color);
+  bottom: -10%;
+}
+.GithubButton:hover .tooltip {
+  opacity: 1;
+}
+
+
+/* Button Bug Report */
+
+.BugButton {
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .BugButton svg {
+    width: 50%;
+  }
+  .BugButton:hover {
+    background-color: rgb(68, 68, 68);
+    overflow: visible;
+  }
+ 
+  .BugButton:active {
+    transform: scale(0.98);
+  }
+  .tooltip {
+    --tooltip-color: rgb(41, 41, 41);
+    position: absolute;
+    top: -10px;
+    background-color: var(--tooltip-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 8px 12px;
+    font-weight: 600;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+    min-width: 100px;
+  }
+  .tooltip::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    content: "";
+    background-color: var(--tooltip-color);
+    bottom: -10%;
+  }
+  .BugButton:hover .tooltip {
+    opacity: 1;
+  }
+
+
+  /* Github Button Me Section */
+
+  .Btn-Github {
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: #dddddd;
+  }
+  
+  .svgIcon {
+    transition-duration: .3s;
+  }
+  
+  .svgIcon path {
+    fill: #161618;
+  }
+  
+  .text-github {
+    position: absolute;
+    color: #161618;
+    width: 120px;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0;
+    transition-duration: .4s;
+  }
+  
+  .Btn-Github:hover .text-github {
+    opacity: 1;
+    transition-duration: .4s;
+  }
+  
+  .Btn-Github:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
+  }
+
+  /* Button LinkedIn */
+
+.LinkedInButton {
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .LinkedInButton img {
+    width: 50%;
+  }
+  .LinkedInButton:hover {
+    background-color: rgb(36, 50, 75);
+    overflow: visible;
+  }
+  
+  .LinkedInButton:active {
+    transform: scale(0.98);
+  }
+  .tooltip {
+    --tooltip-color: rgb(41, 41, 41);
+    position: absolute;
+    top: -20px;
+    background-color: var(--tooltip-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 8px 12px;
+    font-weight: 600;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+    min-width: 100px;
+  }
+  .tooltip::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    content: "";
+    background-color: var(--tooltip-color);
+    bottom: -10%;
+  }
+  .LinkedInButton:hover .tooltip {
+    opacity: 1;
+  }
+
+  /* Button VSCode */
+
+.VSCButton {
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .VSCButton img {
+    width: 50%;
+  }
+  .VSCButton:hover {
+    background-color:  rgb(61, 41, 71);
+    overflow: visible;
+  }
+  
+  .VSCButton:active {
+    transform: scale(0.98);
+  }
+  .tooltip {
+    --tooltip-color: rgb(41, 41, 41);
+    position: absolute;
+    top: -55px;
+    background-color: var(--tooltip-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 8px 12px;
+    font-weight: 600;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+    min-width: 100px;
+  }
+  .tooltip::before {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    content: "";
+    background-color: var(--tooltip-color);
+    bottom: -10%;
+  }
+  .VSCButton:hover .tooltip {
+    opacity: 1;
+  }
+
+  /* Back Button Overlay */
+
+  .back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  

@@ -1,0 +1,261 @@
+.Layout-Start {
+    height: 100vh;
+    width: 100%;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+#first-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /*
+    transform: scale(0.7) translateY(-200%);
+    animation: slide-in-Start 3s ease-in-out;
+    animation-fill-mode: forwards;*/
+    animation: slide-down linear;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    animation: slide-down linear;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+}
+
+#about-button {
+    background: none;
+    border: none;
+    font-family: Main-Bold;
+    font-size: 18px;
+    color: rgb(190, 190, 190);
+}
+
+#about-button:hover {
+    color: white;
+}
+
+.header-links {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Add a delay to each letter for the wave effect */
+.subject-line h1 span:nth-child(1) { animation-delay: 0s; }
+.subject-line h1 span:nth-child(2) { animation-delay: 0.1s; }
+.subject-line h1 span:nth-child(3) { animation-delay: 0.15s; }
+.subject-line h1 span:nth-child(4) { animation-delay: 0.20s; }
+.subject-line h1 span:nth-child(5) { animation-delay: 0.25s; }
+.subject-line h1 span:nth-child(6) { animation-delay: 0.30s; }
+.subject-line h1 span:nth-child(7) { animation-delay: 0.35s; }
+.subject-line h1 span:nth-child(8) { animation-delay: 0.40s; }
+.subject-line h1 span:nth-child(9) { animation-delay: 0.45s; }
+
+.subject-line  {
+    position: relative;
+}
+
+.subject-line h1 span {
+    opacity: 0; 
+    transform: translateY(20px); 
+    display: inline-block;
+    animation: wave 1s ease forwards; 
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in the original position */
+    }
+}
+
+/*
+@keyframes slide-in-Start {
+    0% {
+        transform: translateY(-200%) scale(0.7);
+    }
+
+    80% {
+        transform: translateY(0) scale(0.7);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    } 
+}
+*/
+
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(0) scale(1);
+    } 
+
+    100% {
+        transform: translateY(100vh) scale(0.7);
+    }
+}
+
+
+.me-layout {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100vh;
+    padding: 0 20%;
+}
+
+.me-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.subject-div {
+    height: 200px;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: -100px;
+}
+
+.margin-top100vh {
+    margin-top: 100vh;
+}
+
+.Layout-Project {
+    height: 100vh;
+    width: 100%;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 100vh;
+}
+
+#img-project {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    animation: slide-down-project linear;
+    animation-timeline: view();
+    animation-fill-mode: forwards;
+    transform: scale(0.7);
+}
+
+.information-div {
+    height: 800px;
+    padding: 100px 15%;
+}
+
+@keyframes slide-down-project {
+    0% {
+        transform: translateY(0) scale(0.7);
+    }
+
+    50% {
+        transform: translateY(0) scale(0.7);
+    } 
+
+    100% {
+        transform: translateY(100vh) scale(1);
+    }
+}
+
+    
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 300px;
+    background: #161618;
+    position: relative;
+    color: rgb(172, 172, 172);
+    background: #1f2022;
+    padding: 50px;
+}
+
+#slogo-footer {
+    height: 20px;
+    width: auto;
+    margin-right: 40px;
+    margin-top: 5px;
+}
+
+.legals {
+    display: flex;
+    margin: 0 80px;
+}
+
+.socials {
+    margin: 0 80px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links a, .socials a {
+    color: rgb(172, 172, 172);
+    padding: 0 10px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.copyright-link {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.copyright-link p {
+    font-size: 15px;
+    color: rgb(196, 196, 196);
+}
+
+.divide {
+    height: 15px;
+    width: 1px;
+    background: rgb(97, 97, 97);
+}
+
+
+    
