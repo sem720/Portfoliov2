@@ -20,37 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/* Picture Animation */
-
-/*
-
-document.addEventListener("scroll", () => {
-  const layoutStart = document.querySelector(".Layout-Start");
-
-  // Maximale Scrollhöhe (kann angepasst werden)
-  const maxScroll = 500; // Ab wann das Bild nach oben verschwindet
-  const scrollY = window.scrollY;
-
-  if (scrollY <= maxScroll) {
-      // Prozentsatz der aktuellen Scrollhöhe (zwischen 0 und 1)
-      const progress = scrollY / maxScroll;
-
-      // Skalierung: von 1 bis 0.8
-      const scale = 1 - progress * 0.2;
-
-      // Position: von translateY(0) bis translateY(-100vh)
-      const translateY = -progress * 100;
-
-      // Transform anwenden
-      layoutStart.style.transform = `translateY(${translateY}vh) scale(${scale})`;
-  } else {
-      // Sobald über maxScroll gescrollt wurde, Bild vollständig nach oben verschieben
-      layoutStart.style.transform = `translateY(-100vh) scale(0.8)`;
-  }
-});
-
-*/
-
 /* Overlay About Me */
 
 function toggleOverlay() {
@@ -66,3 +35,70 @@ function toggleOverlay() {
 
 
 
+/* Picture Animation */
+
+const firstImg = document.querySelector('.first-img');
+const header = document.querySelector('header');
+const layoutStart = document.querySelector('.Layout-Start');
+const start = layoutStart.offsetTop;  
+const stop = start + layoutStart.offsetHeight;  
+
+window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop;  
+
+    
+    if (scrollTop + window.innerHeight >= stop) {
+        
+        header.style.position = 'sticky';
+        header.style.top = '0'; // header is sticky outside div
+    } else {
+        // header is fixed inside div
+        header.style.position = 'fixed';
+        header.style.top = '0'; 
+    }
+
+    
+    const delta = scrollTop - start;
+    const scale = Math.max(1 - (delta) / 2200, 0.7);
+    firstImg.style.transform = `scale(${scale})`;
+    header.style.transform = `scale(${scale})`;  
+});
+
+/* Project Pictures */
+
+
+
+/* Project Pictures */
+// Alle Bilder mit der ID #img-project auswählen
+const projectImages = document.querySelectorAll('#img-project');
+const layoutProjects = document.querySelectorAll('.Layout-Project');
+
+layoutProjects.forEach((layoutProject, index) => {
+    const imgProject = projectImages[index]; // Bild zugehörig zum Container
+    const start = layoutProject.offsetTop;  // Startposition des Containers
+    const stop = start + layoutProject.offsetHeight;  // Endposition des Containers
+    
+    // Zu Beginn eine Scale von 0.7 setzen
+    imgProject.style.transform = 'scale(0.7)';
+    
+    // Scroll-Event hinzufügen
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+
+        // Berechnen, ob das Bild in den sichtbaren Bereich des Bildschirms kommt
+        if (scrollTop + window.innerHeight >= stop) {
+            // Bei Erreichen der Endposition des Containers, Bild wird sticky
+            imgProject.style.position = 'sticky';
+            imgProject.style.top = '0';
+        } else {
+            // Solange der Container im Bildbereich ist, wird das Bild skalieren
+            imgProject.style.position = 'relative';
+        }
+
+        // Delta berechnen (scrollen im Container)
+        const delta = scrollTop - start;
+        // Berechnung der Skalierung von 0.7 bis 1
+        const scale = Math.min(1 + delta / 2200, 1); // Anfang bei 0.7, max. bei 1
+        imgProject.style.transform = `scale(${scale}) !important`;
+    });
+});

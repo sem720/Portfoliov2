@@ -1,29 +1,25 @@
 .Layout-Start {
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     position: relative; 
     display: flex;
-    align-items: center;
+    flex-direction: column;
     z-index: 10;
 }
 
 #first-img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     border-radius: 5px;
-    /*
-    transform: scale(0.7) translateY(-200%);
-    animation: slide-in-Start 3s ease-in-out;
-    animation-fill-mode: forwards;*/
-    animation: slide-down linear;
-    animation-timeline: view();
-    animation-fill-mode: forwards;
+    top: 0;
+    position: sticky;
+    will-change: transform;
+    transform: scale(1);
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
     height: 100vh;
     width: 100%;
     z-index: 10;
@@ -32,9 +28,8 @@ header {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    animation: slide-down linear;
-    animation-timeline: view();
-    animation-fill-mode: forwards;
+    will-change: transform;
+    transform: scale(1);
 }
 
 #about-button {
@@ -105,6 +100,7 @@ header {
 }
 */
 
+/*
 
 @keyframes slide-down {
     0% {
@@ -120,6 +116,7 @@ header {
     }
 }
 
+*/
 
 .me-layout {
     height: 400px;
@@ -139,8 +136,9 @@ header {
 }
 
 .subject-div {
-    height: 200px;
+    height: 250px;
     padding: 0 15%;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -152,43 +150,27 @@ header {
 }
 
 .Layout-Project {
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     position: relative; 
     display: flex;
-    align-items: center;
-    margin-bottom: 100vh;
+    flex-direction: column;
 }
 
 #img-project {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    animation: slide-down-project linear;
-    animation-timeline: view();
-    animation-fill-mode: forwards;
     transform: scale(0.7);
+    width: 100%;
+    height: 100vh;
+    border-radius: 5px;
+    position: sticky;
+    will-change: transform;
+    top: 0;
 }
 
 .information-div {
     height: 800px;
     padding: 100px 15%;
 }
-
-@keyframes slide-down-project {
-    0% {
-        transform: translateY(0) scale(0.7);
-    }
-
-    50% {
-        transform: translateY(0) scale(0.7);
-    } 
-
-    100% {
-        transform: translateY(100vh) scale(1);
-    }
-}
-
     
 footer {
     display: flex;
@@ -200,6 +182,12 @@ footer {
     color: rgb(172, 172, 172);
     background: #1f2022;
     padding: 50px;
+}
+
+.top-button {
+    position: absolute;
+    left: 2%;
+    top: -20%;
 }
 
 #slogo-footer {
