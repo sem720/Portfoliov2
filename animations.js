@@ -1,3 +1,26 @@
+/* Preloader */
+
+function showPreloader(duration) {
+  const preloader = document.querySelector(".preloader");
+  if (preloader) {
+    preloader.style.display = "flex";
+
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+      setTimeout(() => {
+        preloader.style.display = "none";
+        document.body.classList.add("loaded");
+      }, 300);
+    }, duration);
+  } else {
+    console.error("Preloader element not found!");
+  }
+}
+
+window.addEventListener("load", () => {
+  showPreloader(2000); // preloader time
+});
+
 /* Dom Element Fade in JS */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,93 +35,71 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2, 
+      threshold: 0.2,
     }
   );
 
   elements.forEach((el) => observer.observe(el));
 });
 
-
 /* Overlay About Me */
 
 function toggleOverlay() {
-  const portfolioScreen = document.querySelector('.overlay');
-  if (portfolioScreen.classList.contains('close')) {
-      portfolioScreen.classList.remove('close');
-      portfolioScreen.classList.add('open');
+  const portfolioScreen = document.querySelector(".overlay");
+  if (portfolioScreen.classList.contains("close")) {
+    portfolioScreen.classList.remove("close");
+    portfolioScreen.classList.add("open");
   } else {
-      portfolioScreen.classList.add('close');
-      portfolioScreen.classList.remove('open');
+    portfolioScreen.classList.add("close");
+    portfolioScreen.classList.remove("open");
   }
 }
 
-
-
 /* Picture Animation */
 
-const firstImg = document.querySelector('.first-img');
-const header = document.querySelector('header');
-const layoutStart = document.querySelector('.Layout-Start');
-const start = layoutStart.offsetTop;  
-const stop = start + layoutStart.offsetHeight;  
+const firstImg = document.querySelector(".first-img");
+const header = document.querySelector("header");
+const layoutStart = document.querySelector(".Layout-Start");
+const start = layoutStart.offsetTop;
+const stop = start + layoutStart.offsetHeight;
 
-window.addEventListener('scroll', () => {
-    const scrollTop = document.documentElement.scrollTop;  
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
 
-    
-    if (scrollTop + window.innerHeight >= stop) {
-        
-        header.style.position = 'sticky';
-        header.style.top = '0'; // header is sticky outside div
-    } else {
-        // header is fixed inside div
-        header.style.position = 'fixed';
-        header.style.top = '0'; 
-    }
+  if (scrollTop + window.innerHeight >= stop) {
+    header.style.position = "sticky";
+    header.style.top = "0";
+  } else {
+    header.style.position = "fixed";
+    header.style.top = "0";
+  }
 
-    
-    const delta = scrollTop - start;
-    const scale = Math.max(1 - (delta) / 2200, 0.7);
-    firstImg.style.transform = `scale(${scale})`;
-    header.style.transform = `scale(${scale})`;  
+  const delta = scrollTop - start;
+  const scale = Math.max(1 - delta / 2200, 0.7);
+  firstImg.style.transform = `scale(${scale})`;
+  header.style.transform = `scale(${scale})`;
 });
 
 /* Project Pictures */
+function setupScrollAnimation() {
+  const projects = document.querySelectorAll(".Layout-Project");
 
+  window.addEventListener("scroll", () => {
+    projects.forEach((project) => {
+      const imgDiv = project.querySelector(".img-project-div");
+      const rect = project.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
+      const progress = Math.min(
+        Math.max((windowHeight - rect.top) / rect.height, 0),
+        1
+      );
 
-/* Project Pictures */
-// Alle Bilder mit der ID #img-project auswählen
-const projectImages = document.querySelectorAll('#img-project');
-const layoutProjects = document.querySelectorAll('.Layout-Project');
+      const scale = 0.7 + progress * 0.3;
 
-layoutProjects.forEach((layoutProject, index) => {
-    const imgProject = projectImages[index]; // Bild zugehörig zum Container
-    const start = layoutProject.offsetTop;  // Startposition des Containers
-    const stop = start + layoutProject.offsetHeight;  // Endposition des Containers
-    
-    // Zu Beginn eine Scale von 0.7 setzen
-    imgProject.style.transform = 'scale(0.7)';
-    
-    // Scroll-Event hinzufügen
-    window.addEventListener('scroll', () => {
-        const scrollTop = document.documentElement.scrollTop;
-
-        // Berechnen, ob das Bild in den sichtbaren Bereich des Bildschirms kommt
-        if (scrollTop + window.innerHeight >= stop) {
-            // Bei Erreichen der Endposition des Containers, Bild wird sticky
-            imgProject.style.position = 'sticky';
-            imgProject.style.top = '0';
-        } else {
-            // Solange der Container im Bildbereich ist, wird das Bild skalieren
-            imgProject.style.position = 'relative';
-        }
-
-        // Delta berechnen (scrollen im Container)
-        const delta = scrollTop - start;
-        // Berechnung der Skalierung von 0.7 bis 1
-        const scale = Math.min(1 + delta / 2200, 1); // Anfang bei 0.7, max. bei 1
-        imgProject.style.transform = `scale(${scale}) !important`;
+      imgDiv.style.transform = `scale(${scale})`;
     });
-});
+  });
+}
+
+setupScrollAnimation();

@@ -1,3 +1,78 @@
+/* Preloader */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #161618;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.loaded {
+  overflow: auto; /* turn scroll back on */
+}
+
+/* Preloader Animation */
+
+.progress-loader {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.progress-loader {
+  width: 150px;
+  background: rgba(236, 236, 238, 0.253);
+  height: 3px;
+  border-radius: 7px;
+}
+
+.progress {
+  content: "";
+  width: 1px;
+  height: 3px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  transition: 0.5s;
+  animation: loading1274 2s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading1274 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 /* Dom Element Fade in JS */
 
 .fade-in {
@@ -13,38 +88,36 @@
 
 /* Overlay About Me */
 
-
 .overlay {
   position: fixed;
   height: 100vh;
   width: 100%;
   display: flex;
   background: #161618;
-  top: 100%; 
-  transition: top 0.5s ease-out; 
+  top: 100%;
+  transition: top 0.5s ease-out;
   z-index: 100;
   left: 0;
   right: 0;
   overflow-y: auto;
+  scrollbar-width: none;
 }
 
-.overlay.close {
-  top: 100%; 
+.close {
+  top: 100%;
   overflow: hidden;
 }
 
-
-.overlay.open {
-  top: 0; 
+.open {
+  top: 0;
 }
-
 
 @keyframes slideInFromBottom {
   0% {
-      top: 100%;
+    top: 100%;
   }
   100% {
-      top: 0;
+    top: 0;
   }
 }
 
@@ -107,6 +180,10 @@
 }
 .margin-top {
   margin-top: 30px;
+}
+
+#comp_icon {
+  margin-left: 5px;
 }
 
 .puffer {

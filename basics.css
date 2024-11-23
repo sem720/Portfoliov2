@@ -1,118 +1,141 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-html,body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
-  
+
 html {
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: #161618;
-    overflow-x: hidden;
-}
-
-
-@font-face {
-    font-family: Main-Regular;
-    src: url(./fonts/SFPRODISPLAYREGULAR.OTF);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #161618;
+  overflow-x: hidden;
 }
 
 @font-face {
-    font-family: Main-Medium;
-    src: url(./fonts/SFPRODISPLAYMEDIUM.OTF);
+  font-family: Main-Regular;
+  src: url(./fonts/SFPRODISPLAYREGULAR.OTF);
 }
 
 @font-face {
-    font-family: Main-Bold;
-    src: url(./fonts/SFPRODISPLAYBOLD.OTF);
+  font-family: Main-Medium;
+  src: url(./fonts/SFPRODISPLAYMEDIUM.OTF);
 }
 
 @font-face {
-    font-family: Main-Italic;
-    src: url(./fonts/SFPRODISPLAYTHINITALIC.OTF);
+  font-family: Main-Bold;
+  src: url(./fonts/SFPRODISPLAYBOLD.OTF);
+}
+
+@font-face {
+  font-family: Main-Italic;
+  src: url(./fonts/SFPRODISPLAYTHINITALIC.OTF);
 }
 
 #content {
-    flex: 1;
-    background: #161618;
+  flex: 1;
+  background: #161618;
 }
 
 h1 {
-    font-family: Main-Bold;
-    font-size: 56px;
-    color: white;
-    letter-spacing: 2px;
-    font-weight: 100;
+  font-family: Main-Bold;
+  font-size: 56px;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
 
 h2 {
-    font-family: Main-Medium;
-    font-size: 50px;
-    color: white;
-    line-height: 80px;
+  font-family: Main-Medium;
+  font-size: 50px;
+  color: white;
+  line-height: 80px;
 }
 
 h3 {
-    font-family: Main-Regular;
-    font-size: 28px;
-    color: white;
-    line-height: 40px;
+  font-family: Main-Regular;
+  font-size: 28px;
+  color: white;
+  line-height: 40px;
 }
 
 h4 {
-    font-family: Main-Regular;
-    font-size: 20px;
-    color: white;
-    line-height: 30px;
+  font-family: Main-Regular;
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
 }
 
 h5 {
-    font-family: Main-Regular;
-    font-size: 18px;
-    color: white;
-    line-height: 30px;
+  font-family: Main-Regular;
+  font-size: 18px;
+  color: white;
+  line-height: 30px;
 }
 
 p {
-    font-family: Main-Bold;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
+  font-family: Main-Bold;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
 }
 
 a {
-    font-family: Main-Regular;
-    font-size: 18px;
-    color: grey;
-    text-decoration: none;
-    cursor: pointer;
+  font-family: Main-Regular;
+  font-size: 28px;
+  color: rgb(211, 211, 211);
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline white !important;
+  color: white;
 }
 
 .highlight {
-    color: white;
+  color: white;
 }
 
 .gradient-purple {
-    background: -webkit-linear-gradient(100deg,#1153af, #7852cf, #994abd, #b04abd, #aa2a35);
-    -webkit-background-clip: text;
-    background-clip: none;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    100deg,
+    #1153af,
+    #7852cf,
+    #994abd,
+    #b04abd,
+    #aa2a35
+  );
+  -webkit-background-clip: text;
+  background-clip: none;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-blue {
-    background: -webkit-linear-gradient(100deg,#1153af, #5452cf, #5576e2, #2b6af1, #62b8ff);
-    -webkit-background-clip: text;
-    background-clip: none;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(
+    100deg,
+    #1153af,
+    #5452cf,
+    #5576e2,
+    #2b6af1,
+    #62b8ff
+  );
+  -webkit-background-clip: text;
+  background-clip: none;
+  -webkit-text-fill-color: transparent;
+}
+
+.green {
+  color: rgb(8, 202, 144);
 }

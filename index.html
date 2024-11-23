@@ -12,14 +12,18 @@
 </head>
 <body>
   
-      
+    <div class="preloader">
+      <div class="progress-loader">
+        <div class="progress"></div>
+    </div>
+    </div>
     
-    <div class="overlay">
+    <div class="overlay close">
       
       <button id="about-button" class="back" onclick="toggleOverlay()">Back</button>
 
       <div class="about-me-img">
-        <img src="./pictures/about-pic-example.jpg" height="70%">
+        <img src="./pictures/example.jpg" height="70%">
       </div>
 
       <div class="about-me-information">
@@ -60,49 +64,40 @@
               Experience
             </h2>
             <div class="experience-inner">
-              <h3> Graduation <img src="./pictures/icons/graduation.png" alt="Graduation" height="20px"><br> 
-              Frenzel Business School Augsburg </h3>
+              <h3> Graduation <br> 
+              <a href="https://www.frenzelschule-augsburg.de/" target="_blank">Frenzel Business School Augsburg</a>  <img id="comp_icon" src="./pictures/icons/graduation.png" alt="Graduation" height="20px"></h3>
               <h5> 2022.08 </h5>
             </div>
 
             <div class="experience-inner">
-              <h3> Apprenticeship Industrial Business Management <img src="./pictures/icons/webasto.png" alt="Graduation" height="20px"><br> 
-              Webasto SE </h3>
-              <h5> 2022.09 - now </h5>
+              <h3> Apprenticeship Industrial Business Management <br> 
+              <a href="https://www.webasto.com/de-de.html" target="_blank">Webasto SE</a><img id="comp_icon" src="./pictures/icons/webasto.png" alt="Graduation" height="20px"></h3>
+              <h5> 2022.09 - <span class="green">now</span></h5>
             </div>
 
             <div class="experience-inner">
-              <h3> Frontend Course <img src="./pictures/icons/dev-akademie.png" alt="Graduation" height="20px"><br> 
-              Developer Akademie </h3> 
-              <h5> 2024.07 - now </h5>
+              <h3> Frontend Course <br> 
+              <a href="https://developerakademie.com/?_gl=1*ndmlgh*_up*MQ..*_gs*MQ..&gclid=CjwKCAiA9IC6BhA3EiwAsbltOB-OaVa9fHtTMOBN5n9jyNUsfeJrAZ_oy0Nz_LvkTSMADx0q-BJwvBoCmIsQAvD_BwE" target="_blank">Developer Akademie</a><img id="comp_icon" src="./pictures/icons/dev-akademie.png" alt="Graduation" height="20px"> </h3> 
+              <h5> 2024.07 - <span class="green">now</span></h5>
             </div>
 
             <div class="experience-inner">
-              <h3> Future Job <img src="./pictures/icons/job.png" alt="Graduation" height="20px"><br> 
-              Your Company? </h3>
+              <h3> Future Job <br> 
+              Your Company? <img id="comp_icon" src="./pictures/icons/job.png" alt="Graduation" height="20px"></h3>
               <h5> 2025 </h5>
             </div>
           </div>
 
           <div class="contact">
             <h2 class="fade-in">
-              Contact
+              About the Developer Akademie Course
             </h2>
+
             <div class="contact-inner margin-top">
-              <a href=""><h3> E-Mail </h3> </a> <img src="./pictures/icons/email.png" alt="E-Mail" height="20px">
-            </div>
-            <div class="contact-inner">
-              <a href="https://github.com/sem720"><h3> Github </h3> </a> <img src="./pictures/icons/github.png" alt="Github" height="20px">
+              <h3> During my Frontend Developer training at Developer Akademie, I gained a solid foundation in web development. I learned the basics of HTML, CSS, and JavaScript, applying these skills in projects such as creating responsive and interactive websites. Key topics included optimizing websites for mobile devices, working with APIs and Firebase, and using Angular. The hands-on projects and close collaboration with experienced coaches have prepared me well for a career as a Frontend Developer.​ </h3> 
             </div>
 
-            <div class="contact-inner">
-              <a href="www.linkedin.com/in/sem-joshua-schwab-0bb193304"><h3> LinkedIn </h3> </a> <img src="./pictures/icons/linkedin.png" alt="LinkedIn" height="20px">
-            </div>
-
-            <div class="contact-inner">
-            <a href="https://marketplace.visualstudio.com/items?itemName=SemSchwab.sem-s-simple-theme"><h3> VSCode Theme </h3> </a>  <img src="./pictures/icons/VSCode.png" alt="VSCode" height="20px">
-            </div>
-          </div>
+          
 
           <div class="tech">
             <h2 class="fade-in">
@@ -166,17 +161,26 @@
             </div>
 
           </div>
+
           <div class="contact">
             <h2 class="fade-in">
-              About the Developer Akademie Course
+              Contact
             </h2>
-
             <div class="contact-inner margin-top">
-              <h3> During my Frontend Developer training at Developer Akademie, I gained a solid foundation in web development. I learned the basics of HTML, CSS, and JavaScript, applying these skills in projects such as creating responsive and interactive websites. Key topics included optimizing websites for mobile devices, working with APIs and Firebase, and using Angular. The hands-on projects and close collaboration with experienced coaches have prepared me well for a career as a Frontend Developer.​ </h3> 
+              <a href=""><h3> E-Mail </h3> </a> <img src="./pictures/icons/email.png" alt="E-Mail" height="20px">
+            </div>
+            <div class="contact-inner">
+              <a href="https://github.com/sem720" target="_blank"><h3> Github </h3> </a> <img src="./pictures/icons/github.png" alt="Github" height="20px">
             </div>
 
-            
+            <div class="contact-inner">
+              <a href="https://www.linkedin.com/in/sem-joshua-schwab-0bb193304/" target="_blank"><h3> LinkedIn </h3> </a> <img src="./pictures/icons/linkedin.png" alt="LinkedIn" height="20px">
+            </div>
 
+            <div class="contact-inner">
+            <a href="https://marketplace.visualstudio.com/items?itemName=SemSchwab.sem-s-simple-theme" target="_blank"><h3> VSCode Theme </h3> </a>  <img src="./pictures/icons/VSCode.png" alt="VSCode" height="20px">
+            </div>
+          </div>
           </div>
 
           <div class="puffer"></div>
@@ -198,20 +202,25 @@
               </h1>
             </div>
           </header>
-          <img id="first-img" class="first-img" src="./pictures/Women-green.png">
+          <img id="first-img" class="first-img" src="./pictures/2.jpg">
         </div>
       <div class="project-block fade-in">
         <div class="subject-div">
           <h5 class="fade-in">1 - 5</h5>
-          <h2 class="gradient-blue fade-in">Pokedex</h2>
+          <h2 class="fade-in">Pokedex</h2>
         </div>
         <div class="Layout-Project">
-          <img id="img-project" class="img-project" src="./pictures/img-project/Pokemon.png">
+          <div class="img-project-div p1">
+            
+          </div>
         </div>
         <div class="information-div">
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3>
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3><br>
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3><br>
+          <h5>Solo project</h5><br>
+          <h3>In this project i developed a Pokémon Trainer Registry. <br><br>I learned how APIs work and how to use them to integrate external data into my web applications. <br><br> I now understand the basics of HTTP requests and responses, including GET, POST, PUT, and DELETE methods. I became comfortable working with tools like the Fetch API to fetch data from open APIs, process it and display it on the frontend.<br>
+          <br>https://pokeapi.co/
+          <br><br>
+          <button id="about-button" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button>
+          </h3>
         </div>
         </div>
       </div>
@@ -219,10 +228,31 @@
       <div class="project-block fade-in">
         <div class="subject-div">
           <h5 class="fade-in">2 - 5</h5>
+          <h2 class="gradient fade-in">Foody Food Delivery</h2>
+        </div>
+        <div class="Layout-Project">
+          <div class="img-project-div p2">
+            
+          </div>
+        </div>
+        <div class="information-div">
+          <h5>Solo project</h5><br>
+          <h3>In this project i developed a Food Delivery Application just like Lieferando.<br><br>I implemented features like a functional shopping cart, dynamic item updates, and handled complex business logic such as calculating totals and managing inventory. This project sharpened my problem-solving abilities and gave me valuable experience in building real-world applications with JavaScript.<br>
+          <br>
+          <button id="about-button" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button>
+        </div>
+        </div>
+      </div>
+
+      <div class="project-block fade-in">
+        <div class="subject-div">
+          <h5 class="fade-in">3 - 5</h5>
           <h2 class="gradient fade-in">ipsidum project example</h2>
         </div>
         <div class="Layout-Project">
-          <img id="img-project" src="./pictures/img-project/lieferando.png">
+          <div class="img-project-div p3">
+            
+          </div>
         </div>
         <div class="information-div">
           <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3>
@@ -238,7 +268,9 @@
           <h2 class="gradient fade-in">ipsidum project example</h2>
         </div>
         <div class="Layout-Project">
-          <img id="img-project" src="./pictures/First-Layout.jpg">
+          <div class="img-project-div p4">
+            
+          </div>
         </div>
         <div class="information-div">
           <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3>
@@ -254,7 +286,9 @@
           <h2 class="gradient fade-in">ipsidum project example</h2>
         </div>
         <div class="Layout-Project">
-          <img id="img-project" src="./pictures/First-Layout.jpg">
+          <div class="img-project-div p5">
+            
+          </div>
         </div>
         <div class="information-div">
           <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3>
@@ -263,25 +297,6 @@
         </div>
         </div>
       </div>
-
-      <div class="project-block fade-in">
-        <div class="subject-div">
-          <h5 class="fade-in">3 - 5</h5>
-          <h2 class="gradient fade-in">ipsidum project example</h2>
-        </div>
-        <div class="Layout-Project">
-          <img id="img-project" src="./pictures/First-Layout.jpg">
-        </div>
-        <div class="information-div">
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3>
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3><br>
-          <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id iure adipisci eligendi a, incidunt itaque? Eos nulla accusantium animi at et fuga, distinctio, ratione iusto repellat quas consequuntur aliquid voluptates.</h3><br>
-        </div>
-        </div>
-      </div>
-
-      
-    
 
     <footer>
         <div class="top-button">
@@ -290,7 +305,7 @@
 
         <div class="legals">
           
-              <img id="slogo-footer" src="./pictures/SLogo.gif">
+              <img id="logo-footer" src="./pictures/icons/logo.png">
           
             <div class="copyright-link">
               <p>@Copyright 2024 Sem Schwab</p>

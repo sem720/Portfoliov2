@@ -1,249 +1,264 @@
 .Layout-Start {
-    height: 200vh;
-    width: 100%;
-    position: relative; 
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
+  height: 200vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
 }
 
 #first-img {
-    width: 100%;
-    height: 100vh;
-    border-radius: 5px;
-    top: 0;
-    position: sticky;
-    will-change: transform;
-    transform: scale(1);
+  width: 100%;
+  height: 100vh;
+  border-radius: 5px;
+  top: 0;
+  position: sticky;
+  will-change: transform;
+  transform: scale(1);
 }
 
 header {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    will-change: transform;
-    transform: scale(1);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  will-change: transform;
+  transform: scale(1);
 }
 
 #about-button {
-    background: none;
-    border: none;
-    font-family: Main-Bold;
-    font-size: 18px;
-    color: rgb(190, 190, 190);
+  background: none;
+  border: none;
+  font-family: Main-Bold;
+  font-size: 18px;
+  color: rgb(190, 190, 190);
 }
 
 #about-button:hover {
-    color: white;
+  color: white;
 }
 
 .header-links {
-    position: absolute;
-    top: 50px;
-    display: flex;
-    gap: 40px;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  gap: 40px;
 }
 
 /* Add a delay to each letter for the wave effect */
-.subject-line h1 span:nth-child(1) { animation-delay: 0s; }
-.subject-line h1 span:nth-child(2) { animation-delay: 0.1s; }
-.subject-line h1 span:nth-child(3) { animation-delay: 0.15s; }
-.subject-line h1 span:nth-child(4) { animation-delay: 0.20s; }
-.subject-line h1 span:nth-child(5) { animation-delay: 0.25s; }
-.subject-line h1 span:nth-child(6) { animation-delay: 0.30s; }
-.subject-line h1 span:nth-child(7) { animation-delay: 0.35s; }
-.subject-line h1 span:nth-child(8) { animation-delay: 0.40s; }
-.subject-line h1 span:nth-child(9) { animation-delay: 0.45s; }
+.subject-line h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+.subject-line h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.subject-line h1 span:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.subject-line h1 span:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.subject-line h1 span:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.subject-line h1 span:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.subject-line h1 span:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.subject-line h1 span:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.subject-line h1 span:nth-child(9) {
+  animation-delay: 0.45s;
+}
 
-.subject-line  {
-    position: relative;
+.subject-line {
+  position: relative;
 }
 
 .subject-line h1 span {
-    opacity: 0; 
-    transform: translateY(20px); 
-    display: inline-block;
-    animation: wave 1s ease forwards; 
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  animation: wave 1s ease forwards;
+  animation-delay: 3s;
 }
 
 @keyframes wave {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px); /* Start slightly below */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* End in the original position */
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-/*
-@keyframes slide-in-Start {
-    0% {
-        transform: translateY(-200%) scale(0.7);
-    }
-
-    80% {
-        transform: translateY(0) scale(0.7);
-    }
-
-    100% {
-        transform: translateY(0) scale(1);
-    } 
-}
-*/
-
-/*
-
-@keyframes slide-down {
-    0% {
-        transform: translateY(0) scale(1);
-    }
-
-    50% {
-        transform: translateY(0) scale(1);
-    } 
-
-    100% {
-        transform: translateY(100vh) scale(0.7);
-    }
-}
-
-*/
 
 .me-layout {
-    height: 400px;
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 100vh;
-    padding: 0 20%;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 100vh;
+  padding: 0 20%;
 }
 
 .me-information {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
 }
 
 .subject-div {
-    height: 250px;
-    padding: 0 15%;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: -100px;
+  height: 250px;
+  padding: 0 15%;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: -100px;
 }
 
 .margin-top100vh {
-    margin-top: 100vh;
+  margin-top: 100vh;
 }
 
 .Layout-Project {
-    height: 200vh;
-    width: 100%;
-    position: relative; 
-    display: flex;
-    flex-direction: column;
+  height: 200vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-#img-project {
-    transform: scale(0.7);
-    width: 100%;
-    height: 100vh;
-    border-radius: 5px;
-    position: sticky;
-    will-change: transform;
-    top: 0;
+.img-project-div {
+  transform: scale(0.7);
+  width: 100%;
+  height: 100vh;
+  border-radius: 5px;
+  position: sticky;
+  will-change: transform;
+  top: 0;
+  overflow: hidden;
+}
+
+#logo-project {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+.p1 {
+  background: url(./pictures/img-project/Pokemon.png);
+  background-position: center;
+}
+
+.p2 {
+  background: url(./pictures/img-project/lieferando.png);
+  background-position: center;
+}
+
+.p3 {
+  background: url(./pictures/img-project/Pokemon.png);
+  background-position: center;
+}
+
+.p4 {
+  background: url(./pictures/img-project/Pokemon.png);
+  background-position: center;
+}
+
+.p5 {
+  background: url(./pictures/img-project/Pokemon.png);
+  background-position: center;
 }
 
 .information-div {
-    height: 800px;
-    padding: 100px 15%;
+  height: 800px;
+  padding: 100px 15%;
 }
-    
+
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 300px;
-    background: #161618;
-    position: relative;
-    color: rgb(172, 172, 172);
-    background: #1f2022;
-    padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 300px;
+  background: #161618;
+  position: relative;
+  color: rgb(172, 172, 172);
+  background: #1f2022;
+  padding: 50px;
 }
 
 .top-button {
-    position: absolute;
-    left: 2%;
-    top: -20%;
+  position: absolute;
+  left: 2%;
+  top: -20%;
 }
 
-#slogo-footer {
-    height: 20px;
-    width: auto;
-    margin-right: 40px;
-    margin-top: 5px;
+#logo-footer {
+  height: 100px;
+  width: auto;
+  margin-right: 40px;
+  margin-top: 5px;
 }
 
 .legals {
-    display: flex;
-    margin: 0 80px;
+  display: flex;
+  margin: 0 80px;
 }
 
 .socials {
-    margin: 0 80px;
+  margin: 0 80px;
 }
 
 .socials {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .links {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.links a, .socials a {
-    color: rgb(172, 172, 172);
-    padding: 0 10px;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 700;
+.links a,
+.socials a {
+  color: rgb(172, 172, 172);
+  padding: 0 10px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyright-link {
-    margin-right: 36px;
-    display: flex;
-    align-items: center;
+  margin-right: 36px;
+  display: flex;
+  align-items: center;
 }
 
 .copyright-link p {
-    font-size: 15px;
-    color: rgb(196, 196, 196);
+  font-size: 15px;
+  color: rgb(196, 196, 196);
 }
 
 .divide {
-    height: 15px;
-    width: 1px;
-    background: rgb(97, 97, 97);
+  height: 15px;
+  width: 1px;
+  background: rgb(97, 97, 97);
 }
-
-
-    
