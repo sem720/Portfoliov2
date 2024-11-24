@@ -28,7 +28,7 @@
 
       <div class="about-me-information">
         <div class="introduction">
-          <h5 class="fade-in">About Me</h5>
+          <h5 class="fade-in"><span class="gradient-purple">About Me</span></h5>
             
             <h2 class="gradient fade-in">I build Websites with passion.</h2>
             <br>
@@ -72,13 +72,13 @@
             <div class="experience-inner">
               <h3> Apprenticeship Industrial Business Management <br> 
               <a href="https://www.webasto.com/de-de.html" target="_blank">Webasto SE</a><img id="comp_icon" src="./pictures/icons/webasto.png" alt="Graduation" height="20px"></h3>
-              <h5> 2022.09 - <span class="green">now</span></h5>
+              <h5><span class="gradient-purple">2022.09 - now</span></h5>
             </div>
 
             <div class="experience-inner">
               <h3> Frontend Course <br> 
               <a href="https://developerakademie.com/?_gl=1*ndmlgh*_up*MQ..*_gs*MQ..&gclid=CjwKCAiA9IC6BhA3EiwAsbltOB-OaVa9fHtTMOBN5n9jyNUsfeJrAZ_oy0Nz_LvkTSMADx0q-BJwvBoCmIsQAvD_BwE" target="_blank">Developer Akademie</a><img id="comp_icon" src="./pictures/icons/dev-akademie.png" alt="Graduation" height="20px"> </h3> 
-              <h5> 2024.07 - <span class="green">now</span></h5>
+              <h5><span class="gradient-purple">2024.07 - now</span></h5>
             </div>
 
             <div class="experience-inner">
@@ -90,13 +90,23 @@
 
           <div class="contact">
             <h2 class="fade-in">
+              About the Apprenticeship at Webasto
+            </h2>
+
+            <div class="contact-inner margin-top">
+              <h3>I decided to pursue an apprenticeship as an Industrial Business Manager at Webasto. <br> Webasto, headquartered in Stockdorf, Germany, is a global automotive supplier specializing in the development and production of sunroofs, panoramic roofs, convertible roofs, heating systems, battery systems, and charging solutions for all kind of vehicles. <br><br> During my time there, I gained experience with various applications, such as Microsoft CRM, PowerApps, Power Automate, VBA, UIPath, and many others. I also successfully contributed to developing a workflow application in Microsoft PowerApps (low-code), designed to replace an existing outsourced application.</h3> 
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="fade-in">
               About the Developer Akademie Course
             </h2>
 
             <div class="contact-inner margin-top">
-              <h3> During my Frontend Developer training at Developer Akademie, I gained a solid foundation in web development. I learned the basics of HTML, CSS, and JavaScript, applying these skills in projects such as creating responsive and interactive websites. Key topics included optimizing websites for mobile devices, working with APIs and Firebase, and using Angular. The hands-on projects and close collaboration with experienced coaches have prepared me well for a career as a Frontend Developer.​ </h3> 
+              <h3> During my Frontend Developer training at Developer Akademie, I gained a solid foundation in web development. I learned the basics of HTML, CSS, and JavaScript, applying these skills in projects such as creating responsive and interactive websites. <br><br> Key topics included optimizing websites for mobile devices, working with APIs and Firebase, and using Angular. The hands-on projects and close collaboration with experienced coaches have prepared me well for a career as a Frontend Developer.​ </h3> 
             </div>
-
+          </div>
           
 
           <div class="tech">
@@ -167,7 +177,7 @@
               Contact
             </h2>
             <div class="contact-inner margin-top">
-              <a href=""><h3> E-Mail </h3> </a> <img src="./pictures/icons/email.png" alt="E-Mail" height="20px">
+              <a href=""><h3><span class="gradient-purple">E-Mail</span></h3></a> <img src="./pictures/icons/email.png" alt="E-Mail" height="20px">
             </div>
             <div class="contact-inner">
               <a href="https://github.com/sem720" target="_blank"><h3> Github </h3> </a> <img src="./pictures/icons/github.png" alt="Github" height="20px">
@@ -193,19 +203,26 @@
         <div class="Layout-Start">
           <header>
             <div class="header-links">
-              <p>Projects</p>
+              <img src="./pictures/flaticon.png" height="25px">
+              <a class="text-none" href="#subject1"><p>Projects</p></a>
               <button id="about-button" onclick="toggleOverlay()">About</button>
             </div>
+            <!--
             <div class="subject-line">
               <h1>
                 <span>S</span><span>e</span><span>m</span><span>S</span><span>c</span><span>h</span><span>w</span><span>a</span><span>b</span>
               </h1>
             </div>
+            -->
           </header>
-          <img id="first-img" class="first-img" src="./pictures/2.jpg">
+          <div class="wallpaper-div">
+            <img id="wallpaper-top" src="./pictures/wallpaper-top.png">
+            <h1 class="Font-1">SemSchwab</h1>
+            <h1 class="Font-2">SemSchwab</h1>
+          </div>
         </div>
       <div class="project-block fade-in">
-        <div class="subject-div">
+        <div class="subject-div" id="subject1">
           <h5 class="fade-in">1 - 5</h5>
           <h2 class="fade-in">Pokedex</h2>
         </div>
@@ -239,7 +256,7 @@
           <h5>Solo project</h5><br>
           <h3>In this project i developed a Food Delivery Application just like Lieferando.<br><br>I implemented features like a functional shopping cart, dynamic item updates, and handled complex business logic such as calculating totals and managing inventory. This project sharpened my problem-solving abilities and gave me valuable experience in building real-world applications with JavaScript.<br>
           <br>
-          <button id="about-button" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button>
+          <button id="about-button" class="button-project" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button>
         </div>
         </div>
       </div>
@@ -305,13 +322,13 @@
 
         <div class="legals">
           
-              <img id="logo-footer" src="./pictures/icons/logo.png">
+              <img id="logo-footer" src="./pictures/flaticon.png">
           
             <div class="copyright-link">
               <p>@Copyright 2024 Sem Schwab</p>
             </div>
             <div class="links">
-                <a href="" class="impressum">legals</a>
+                <a href="legals.html" class="impressum">legals</a>
                     <div class="divide"></div>
                     <button class="BugButton">
                         <svg

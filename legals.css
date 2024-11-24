@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #161618;
+}
+
+#about-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-family: Main-Bold;
+  font-size: 18px;
+  color: rgb(214, 214, 214);
+  cursor: pointer;
+}
+
+#about-button:hover {
+  color: white;
+}
+
+.legals-div {
+  padding: 100px;
+  width: 70%;
+}
+
+.legals-div h3 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.legals-div p {
+  line-height: 28px;
+  margin-left: 30px;
+}
+
+.legals-div a {
+  font-size: 20px;
+}

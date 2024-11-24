@@ -43,17 +43,32 @@ body {
   src: url(./fonts/SFPRODISPLAYTHINITALIC.OTF);
 }
 
+@font-face {
+  font-family: Futura Bold;
+  src: url(./fonts/Futura\ Extra\ Black\ font.ttf);
+}
+
+@font-face {
+  font-family: Futura light;
+  src: url(./fonts/Futura\ Light\ font.ttf);
+}
+
+@font-face {
+  font-family: Sarcolanta;
+  src: url(./fonts/Sarcolenta.ttf);
+}
+
 #content {
   flex: 1;
   background: #161618;
 }
 
 h1 {
-  font-family: Main-Bold;
+  font-family: Sarcolanta;
   font-size: 56px;
   color: white;
   letter-spacing: 2px;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 h2 {
@@ -100,7 +115,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline white !important;
+  text-decoration: underline white;
   color: white;
 }
 
@@ -111,10 +126,10 @@ a:hover {
 .gradient-purple {
   background: -webkit-linear-gradient(
     100deg,
-    #1153af,
-    #7852cf,
-    #994abd,
-    #b04abd,
+    #58d2e7,
+    #5b94df,
+    #b579d1,
+    #e085ec,
     #aa2a35
   );
   -webkit-background-clip: text;
@@ -138,4 +153,8 @@ a:hover {
 
 .green {
   color: rgb(8, 202, 144);
+}
+
+.text-none:hover {
+  text-decoration: none;
 }

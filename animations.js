@@ -57,7 +57,7 @@ function toggleOverlay() {
 
 /* Picture Animation */
 
-const firstImg = document.querySelector(".first-img");
+const firstImg = document.querySelector(".wallpaper-div");
 const header = document.querySelector("header");
 const layoutStart = document.querySelector(".Layout-Start");
 const start = layoutStart.offsetTop;
@@ -76,6 +76,7 @@ window.addEventListener("scroll", () => {
 
   const delta = scrollTop - start;
   const scale = Math.max(1 - delta / 2200, 0.7);
+
   firstImg.style.transform = `scale(${scale})`;
   header.style.transform = `scale(${scale})`;
 });
@@ -103,3 +104,34 @@ function setupScrollAnimation() {
 }
 
 setupScrollAnimation();
+
+/* Text Wallpaper */
+
+// Funktion zur Animation der Texte
+function Font1Animation(selector1, selector2, maxOffset = 50) {
+  const Font1 = document.querySelector(selector1);
+  const Font2 = document.querySelector(selector2);
+
+  if (!Font1 || !Font2) {
+    console.error("Eines der Elemente wurde nicht gefunden.");
+    return;
+  }
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop; // Aktuelle Scroll-Position
+    const viewportHeight = window.innerHeight; // Höhe des Viewports
+
+    // Fortschritt des Scrollens (zwischen 0 und 1)
+    const progress = Math.min(Math.max(scrollTop / viewportHeight, 0), 1);
+
+    // Verschiebung berechnen
+    const offset = progress * maxOffset; // Maximal maxOffset nach rechts
+
+    // Translation auf beide Texte anwenden
+    Font1.style.transform = `translateX(${offset}vw)`;
+    Font2.style.transform = `translateX(${offset}vw)`;
+  });
+}
+
+// Funktion aufrufen und Texte animieren
+Font1Animation(".Font-1", ".Font-2", 100);

@@ -73,6 +73,40 @@ body.loaded {
   }
 }
 
+/* Start Animation Text and Picture */
+
+@keyframes start-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes start-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-40px);
+  }
+}
+
+/* Fade animation header links */
+
+@keyframes Anim-Fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* Dom Element Fade in JS */
 
 .fade-in {

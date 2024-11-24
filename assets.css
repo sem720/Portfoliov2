@@ -1,3 +1,34 @@
+/* About Button Header */
+
+#about-button {
+  background: none;
+  border: none;
+  font-family: Main-Bold;
+  font-size: 18px;
+  color: rgb(214, 214, 214);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#about-button:hover {
+  color: white;
+}
+
+/* Top Button Footer */
+
+.top-button {
+  position: absolute;
+  left: 2%;
+  top: -20%;
+}
+
+.top-button a:hover {
+  text-decoration: none;
+}
+
 /* Button Github Footer */
 
 .GithubButton {
