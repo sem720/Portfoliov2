@@ -54,8 +54,8 @@ body {
 }
 
 @font-face {
-  font-family: Sarcolanta;
-  src: url(./fonts/Sarcolenta.ttf);
+  font-family: Lemon;
+  src: url(./fonts/LEMONMILK-Light.otf);
 }
 
 #content {
@@ -64,7 +64,7 @@ body {
 }
 
 h1 {
-  font-family: Sarcolanta;
+  font-family: Lemon;
   font-size: 56px;
   color: white;
   letter-spacing: 2px;
@@ -95,7 +95,7 @@ h4 {
 h5 {
   font-family: Main-Regular;
   font-size: 18px;
-  color: white;
+  color: rgb(146, 146, 146);
   line-height: 30px;
 }
 
@@ -124,14 +124,7 @@ a:hover {
 }
 
 .gradient-purple {
-  background: -webkit-linear-gradient(
-    100deg,
-    #58d2e7,
-    #5b94df,
-    #b579d1,
-    #e085ec,
-    #aa2a35
-  );
+  background: -webkit-linear-gradient(100deg, #ffffff 20%, #414141);
   -webkit-background-clip: text;
   background-clip: none;
   -webkit-text-fill-color: transparent;
