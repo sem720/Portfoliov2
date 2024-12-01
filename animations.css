@@ -24,6 +24,29 @@ body.loaded {
   overflow: auto; /* turn scroll back on */
 }
 
+/* Mouse Move Animation */
+
+:root {
+  --color-trail: #131313;
+}
+
+.trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+}
+
+.trail path {
+  fill: none;
+
+  stroke: var(--color-trail);
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Preloader Animation */
 
 .progress-loader {
@@ -93,9 +116,7 @@ body.loaded {
   height: 50%;
   width: 40%;
   transform: translateY(-200vh);
-  background: url(./pictures/rick-rothenberg-AWfnhPlNGnM-unsplash.jpg) center;
-  background-repeat: none;
-  background-size: cover;
+  background: rgb(238, 238, 238);
   animation: imgStart 2s;
   animation-fill-mode: forwards;
   animation-delay: 2s;

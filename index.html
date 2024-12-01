@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SemSchwab Portfolio</title>
+    <title>SemSchwab</title>
     <link rel="shortcut icon" href="./pictures/flaticon-new.png" type="image/x-icon">
     <link rel="stylesheet" href="./basics.css">
     <link rel="stylesheet" href="/style.css">
@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./assets.css">    
 </head>
 <body>
+
+  
+    
   
     <div class="preloader">
       <div class="progress-loader">
@@ -163,7 +166,7 @@
             <img class="icon" src="./pictures/icons/github.png" alt="GitHub">
           </div>
           <div class="inner margin0">
-            <a href="https://www.linkedin.com/" target="_blank"><h3>LinkedIn</h3></a>
+            <a href="https://www.linkedin.com/in/sem-joshua-schwab-0bb193304/" target="_blank"><h3>LinkedIn</h3></a>
             <img class="icon" src="./pictures/icons/linkedin.png" alt="LinkedIn">
           </div>
           <div class="inner margin0">
@@ -180,16 +183,19 @@
     <div class="content" id="content">
       
         <div class="Layout-Start">
+          <svg class="trail" viewBox="0 0 1 1">
+            <path d="" />
+          </svg>
           <header>
             <div class="header-links">
               <img id="header-dot" src="./pictures/flaticon.png" height="25px">
-              <a class="text-none" href="#subject1"><p>Projects</p></a>
-              <button id="about-button" onclick="toggleOverlay()">About</button>
+              <a class="text-none" href="#subject1"><div class="nav-button"><p class="text">Projects</p></div></a>
+              <a class="text-none" href="#"><div onclick="toggleOverlay()" class="nav-button"><p class="text grey">About</p></div></a>
             </div>
            
           </header>
           <div class="wallpaper-div">
-            <div class="quad">
+            <div class="quad" id="quad">
               <h4 class="Font-1">
                 <span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>e</span><span>n</span><span>d</span>
                 <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
@@ -361,27 +367,28 @@
             </div>
         </div>
         <div class="socials">
-            <button class="GithubButton">
+            <a href="https://github.com/sem720" target="_blank"><button class="GithubButton">
               <img class="GithubImg" src="./pictures/icons/github.png" alt="Github">
             
               <span class="tooltip">Github</span>
-            </button>
-            <button class="LinkedInButton">
+            </button></a>
+            <a href="https://www.linkedin.com/in/sem-joshua-schwab-0bb193304/" target="_blank"><button class="LinkedInButton">
                 <img class="linkedinImg" src="./pictures/icons/linkedin.png" alt="LinkedIn">
               
                 <span class="tooltip">LinkedIn</span>
-              </button>
-              <button class="VSCButton">
+              </button></a>
+              <a href="https://marketplace.visualstudio.com/items?itemName=SemSchwab.sem-s-simple-theme" target="_blank"><button class="VSCButton">
                 <img class="VSCImg" src="./pictures/icons/VSCode.png" alt="VSCode">
               
                 <span class="tooltip">my VSCode Theme</span>
-              </button>
+              </button></a>
         </div>
     </footer>
     </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
 <script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script defer src="./animations.js"></script>
 
 </html>

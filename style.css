@@ -8,19 +8,22 @@
 }
 
 .quad {
+  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 .Font-1 {
   position: absolute;
   top: 0px;
   left: 0px;
-  color: rgb(255, 255, 255);
+  color: #161618;
   font-size: 16px;
   z-index: 13;
   line-height: 10vh;
@@ -31,12 +34,11 @@
 }
 
 .Font-2 {
-  color: rgb(255, 255, 255);
+  color: #161618;
   font-size: 14vh;
   z-index: 13;
   line-height: 18vh;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.247);
-  transform: translateX(-20px);
+  transform: translateX(30px);
 }
 
 #wallpaper-top {
@@ -52,21 +54,19 @@
 }
 
 .wallpaper-div {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 100vh;
   border-radius: 5px;
-  top: 0;
-  position: sticky;
-  will-change: transform;
-  transform: scale(1);
   overflow: hidden;
-  background: url(./pictures/rick-rothenberg-AWfnhPlNGnM-unsplash.jpg) no-repeat
-    center;
-  background-size: cover;
   z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
+  will-change: transform;
+  transform: scale(1);
+  background: rgb(238, 238, 238);
 }
 
 header {
@@ -74,7 +74,7 @@ header {
   top: 0;
   height: 100vh;
   width: 100%;
-  z-index: 10;
+  z-index: 101;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,11 +88,10 @@ header {
   position: absolute;
   display: flex;
   align-items: center;
-  top: 30px;
+  top: 10px;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   opacity: 0;
-
   animation: Anim-Fade 0.7s ease-out;
   animation-fill-mode: forwards;
   animation-delay: 5.5s;
@@ -100,6 +99,7 @@ header {
 
 #header-dot {
   animation: rotate 3s ease-out infinite;
+  margin-right: 20px;
 }
 
 .me-layout {
@@ -254,4 +254,37 @@ footer {
   height: 15px;
   width: 1px;
   background: rgb(97, 97, 97);
+}
+
+@media (max-width: 1281px) {
+  .Font-2 {
+    font-size: 10vh;
+    line-height: 15vh;
+  }
+}
+
+@media (max-width: 1180px) {
+  /* tablett */
+}
+
+@media (max-width: 730px) {
+  .Font-2 {
+    font-size: 7vh;
+    line-height: 10vh;
+  }
+  .Font-1 {
+    display: none;
+  }
+}
+
+@media (max-width: 490px) {
+  .Font-2 {
+    font-size: 5vh;
+    line-height: 10vh;
+    transform: translateX(0);
+  }
+  .quad {
+    justify-content: center;
+    align-items: center;
+  }
 }
