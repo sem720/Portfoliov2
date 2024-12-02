@@ -161,26 +161,35 @@ header {
 .p1 {
   background: url(./pictures/img-project/Pokemon.png);
   background-position: center;
+  background-size: cover;
 }
 
 .p2 {
   background: url(./pictures/img-project/lieferando.png);
   background-position: center;
+  background-size: cover;
 }
 
 .p3 {
-  background: url(./pictures/img-project/Pokemon.png);
+  background: url(./pictures/img-project/coming-soon.png);
   background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .p4 {
-  background: url(./pictures/img-project/Pokemon.png);
+  background: url(./pictures/img-project/coming-soon.png);
   background-position: center;
+  background-size: cover;
 }
 
 .p5 {
-  background: url(./pictures/img-project/Pokemon.png);
+  background: url(./pictures/img-project/coming-soon.png);
   background-position: center;
+  background-size: cover;
 }
 
 .information-div {
@@ -193,10 +202,9 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   height: 300px;
-  background: #161618;
   position: relative;
   color: rgb(172, 172, 172);
-  background: #1f2022;
+  background: #0e0e0e;
   padding: 50px;
 }
 
