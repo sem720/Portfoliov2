@@ -1,3 +1,15 @@
+/* Logo Header */
+
+#header-dot {
+  position: absolute;
+  top: 32px;
+  left: 30px;
+  opacity: 0;
+  animation: Anim-Fade 0.7s ease-out, rotate 3s ease-out infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 5.5s;
+}
+
 /* About Button Header */
 
 .nav-button {

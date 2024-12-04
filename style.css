@@ -22,7 +22,7 @@
 .Font-1 {
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: 30px;
   color: #161618;
   font-size: 16px;
   z-index: 13;
@@ -97,11 +97,6 @@ header {
   animation-delay: 5.5s;
 }
 
-#header-dot {
-  animation: rotate 3s ease-out infinite;
-  margin-right: 20px;
-}
-
 .me-layout {
   height: 400px;
   position: relative;
@@ -171,6 +166,12 @@ header {
 }
 
 .p3 {
+  background: url(./pictures/img-project/Rock.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.p4 {
   background: url(./pictures/img-project/coming-soon.png);
   background-position: center;
   background-size: cover;
@@ -180,12 +181,6 @@ header {
   flex-direction: column;
 }
 
-.p4 {
-  background: url(./pictures/img-project/coming-soon.png);
-  background-position: center;
-  background-size: cover;
-}
-
 .p5 {
   background: url(./pictures/img-project/coming-soon.png);
   background-position: center;
@@ -193,8 +188,8 @@ header {
 }
 
 .information-div {
-  height: 800px;
-  padding: 100px 15%;
+  padding: 200px 15%;
+  padding-top: 100px;
 }
 
 footer {
@@ -209,15 +204,15 @@ footer {
 }
 
 #logo-footer {
-  height: 25px;
+  height: 22px;
   width: auto;
   margin-right: 40px;
-  margin-top: 5px;
 }
 
 .legals {
   display: flex;
   margin: 0 80px;
+  align-items: center;
 }
 
 .socials {
@@ -248,7 +243,7 @@ footer {
 }
 
 .copyright-link {
-  margin-right: 36px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
 }
