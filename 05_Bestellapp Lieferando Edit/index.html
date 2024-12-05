@@ -1,89 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon">
-    <title>Foodly</title>
-    <link rel="stylesheet" href="./styles/basics.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/assets.css">
-    <link rel="stylesheet" href="./styles/basket.css">
-</head>
-<body onload="renderBlock()">
-    <header>    
-        <img id="bestellapp-logo" src="./images/Logo.png" alt="Logo">
-        <img onclick="toggleOverlay (event)" id="burger" src="./images/icons/burger-menu.png" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/Favicon.png" type="image/x-icon" />
+    <title>Foody</title>
+    <link rel="stylesheet" href="./styles/basics.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
+  </head>
+  <body onload="renderBlock()">
+    <header>
+      <img id="bestellapp-logo" src="./images/Logo.png" alt="Logo" />
+      <img
+        onclick="toggleOverlay (event)"
+        id="burger"
+        src="./images/icons/burger-menu.png"
+        alt=""
+      />
     </header>
 
     <div class="content">
-            <div class="main-track">
-                <div class="main-pic">
-                    <img id="img-main" src="./images/img-noodles.jpg" alt="Main-Pic">
-                </div>
-                
-                <div class="info-restaurant">
-                    <h1>Placa la Pizza</h1>
-                <div class="star-flex">
-                    <div class="rating">    
-                        <h5>Rating (4,5 of 5 stars)</h5>
-                    </div>
-                    <div>
-                        <img id="star" src="./images/star.png" alt="star">
-                        <img id="star" src="./images/star.png" alt="star">
-                        <img id="star" src="./images/star.png" alt="star">
-                        <img id="star" src="./images/star.png" alt="star">
-                        <img id="star" src="./images/star-half.png" alt="star">
-                    </div>
-                </div>
-                </div>
-                <div class="navbar">
-                    
-                    <a href="#pizza"><h3>Pizza</h3></a>
-                            
-                        
-                </div>
-                <div class="content-menu"></div>
-                    <div class="head-menu">
-                        <div class="head-picture">
-                            <img id="img-pizza" src="./images/img-pizza.jpg" alt="Pizza">
-                        </div>
-                        <h2 id="pizza">Pizza</h2>
-                    </div>
-                    <div class="render-pizza" id="render-pizza">
-                        
-                    </div>
-                </div>
-            </div>
+      <div class="main-track">
+        <div class="main-pic">
+          <img id="img-main" src="./images/img-noodles.jpg" alt="Main-Pic" />
+        </div>
 
-            <div class="side-track" id="side-track">
-                <div class="basket-content" id="basket-content">
-                    <h2>Cart</h2>
-                    <div class="item-content" id="item-content">
-                        
-                        <div class="basket-sum"><div><p>subtotal:</p><p>delivery:</p><h3>total:</h3></div>
-                                                <div><p>0.00 €</p><p>5.00 €</p><h3>5.00 €</h3></div></div>
-                    </div>
-                </div>
-                    <div class="order-section">
-                        <button onclick="resetBasket()" class="button-order">
-                            Order now
-                        </button>
-                        <div>
-                            <img id="pay" src="./images/icons/paypal-logo.png" alt="">
-                            <img id="pay" src="./images/icons/geld.png" alt="">
-                            <img id="pay" src="./images/icons/symbole.png" alt="">
-                        </div>
-                    </div>
+        <div class="info-restaurant">
+          <h1>Placa la Pizza</h1>
+          <div class="star-flex">
+            <div class="rating">
+              <h5>Rating (4,5 of 5 stars)</h5>
             </div>
+            <div>
+              <img id="star" src="./images/star.png" alt="star" />
+              <img id="star" src="./images/star.png" alt="star" />
+              <img id="star" src="./images/star.png" alt="star" />
+              <img id="star" src="./images/star.png" alt="star" />
+              <img id="star" src="./images/star-half.png" alt="star" />
+            </div>
+          </div>
+        </div>
+        <div class="navbar">
+          <a href="#pizza"><h3>Pizza</h3></a>
+        </div>
+        <div class="content-menu"></div>
+        <div class="head-menu">
+          <div class="head-picture">
+            <img id="img-pizza" src="./images/img-pizza.jpg" alt="Pizza" />
+          </div>
+          <h2 id="pizza">Pizza</h2>
+        </div>
+        <div class="render-pizza" id="render-pizza"></div>
+      </div>
+    </div>
+
+    <div class="side-track" id="side-track">
+      <div class="basket-content" id="basket-content">
+        <h2>Cart</h2>
+        <div class="item-content" id="item-content">
+          <div class="basket-sum">
+            <div>
+              <p>subtotal:</p>
+              <p>delivery:</p>
+              <h3>total:</h3>
+            </div>
+            <div>
+              <p>0.00 €</p>
+              <p>5.00 €</p>
+              <h3>5.00 €</h3>
+            </div>
+          </div>
+          <div class="order-section">
+            <button onclick="resetBasket()" class="button-order">
+                Order now
+            </button>
+            <div>
+                <img id="pay" src="./images/icons/paypal-logo.png" alt="">
+                <img id="pay" src="./images/icons/geld.png" alt="">
+                <img id="pay" src="./images/icons/symbole.png" alt="">
+            </div>
+        </div>
+    </div>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <img id="dev-logo" src="./images/dev-logo.png" alt="">
-        <p>Please note: This website is not a real website. Nothing is sold, nor are the payment methods certified or functional</p>
+      <img id="dev-logo" src="./images/dev-logo.png" alt="" />
+      <p>
+        Please note: This website is not a real website. Nothing is sold, nor
+        are the payment methods certified or functional
+      </p>
     </footer>
-</body>
-<script src="./script.js"></script>
-<script src="./scripts/template.js"></script>
-<script src="./scripts/db.js"></script>
+  </body>
+  <script src="./script.js"></script>
+  <script src="./scripts/template.js"></script>
+  <script src="./scripts/db.js"></script>
 </html>

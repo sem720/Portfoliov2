@@ -73,7 +73,7 @@ h1 {
 
 h2 {
   font-family: Main-Medium;
-  font-size: 50px;
+  font-size: 46px;
   color: white;
   line-height: 80px;
 }
@@ -119,6 +119,18 @@ a:hover {
   color: white;
 }
 
+@media (max-width: 490px) {
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .highlight {
   color: white;
 }
@@ -154,4 +166,11 @@ a:hover {
 
 .color-black {
   color: rgb(17, 17, 17);
+}
+
+.a_sim {
+  font-family: Main-Regular;
+  font-size: 28px;
+  line-height: 28px;
+  display: flex;
 }

@@ -1,15 +1,17 @@
 let docRef = document.getElementById("item-content");
 
 function getPizzaTemplate(blockIndex) {
+  // multiply price x amount
+  let totalPrice =
+    pizzas[blockIndex].amount * parseFloat(pizzas[blockIndex].price);
 
-    // multiply price x amount
-    let totalPrice = pizzas[blockIndex].amount * parseFloat(pizzas[blockIndex].price);
-
-    // return html block to function to add in other functions 
-    return `<div class="item-title"><h3>${pizzas[blockIndex].title}</h3></div>
+  // return html block to function to add in other functions
+  return `<div class="item-title"><h3>${pizzas[blockIndex].title}</h3></div>
                 <div class="item-infos">
                     <button onclick="amountDown(${blockIndex})" class="button-down"><div class="hoverEffect"><div></div></div></button>
-                    <p id="amount-${blockIndex}">x${pizzas[blockIndex].amount}</p>
+                    <p id="amount-${blockIndex}">x${
+    pizzas[blockIndex].amount
+  }</p>
                     <button onclick="amountUp(${blockIndex})" class="button-up"><div class="hoverEffect"><div></div></div></button>
                     <p id="price-${blockIndex}">${totalPrice.toFixed(2)}€</p>
                     <button onclick="deletePizza(${blockIndex})" class="button-remove"><div class="hoverEffect"><div></div></div></button>
@@ -17,93 +19,104 @@ function getPizzaTemplate(blockIndex) {
 }
 
 function addPizzaToBasket(blockIndex) {
-    if (pizzas[blockIndex].amount === 0) {
-        pizzas[blockIndex].amount += 1;
-        docRef.innerHTML += getPizzaTemplate(blockIndex);
-    } else {
-        amountUp(blockIndex);
-    }
+  if (pizzas[blockIndex].amount === 0) {
+    pizzas[blockIndex].amount += 1;
+    docRef.innerHTML += getPizzaTemplate(blockIndex);
+  } else {
+    amountUp(blockIndex);
+  }
 
-    renderBasket();
+  renderBasket();
 }
 
 function updatePizzaDisplay(blockIndex) {
-    let amountElement = document.getElementById(`amount-${blockIndex}`);
-    let priceElement = document.getElementById(`price-${blockIndex}`);
-    let totalPrice = pizzas[blockIndex].amount * parseFloat(pizzas[blockIndex].price);
+  let amountElement = document.getElementById(`amount-${blockIndex}`);
+  let priceElement = document.getElementById(`price-${blockIndex}`);
+  let totalPrice =
+    pizzas[blockIndex].amount * parseFloat(pizzas[blockIndex].price);
 
-    amountElement.innerText = pizzas[blockIndex].amount;
-    priceElement.innerText = totalPrice.toFixed(2);
+  amountElement.innerText = pizzas[blockIndex].amount;
+  priceElement.innerText = totalPrice.toFixed(2);
 }
 
 function amountUp(blockIndex) {
-    pizzas[blockIndex].amount += 1;
-    updatePizzaDisplay(blockIndex);
-    renderBasket();
+  pizzas[blockIndex].amount += 1;
+  updatePizzaDisplay(blockIndex);
+  renderBasket();
 }
 
 function amountDown(blockIndex) {
-    if (pizzas[blockIndex].amount > 1) {
-        pizzas[blockIndex].amount -= 1;
-        updatePizzaDisplay(blockIndex);
-    } else {
-        deletePizza(blockIndex);
-    }
+  if (pizzas[blockIndex].amount > 1) {
+    pizzas[blockIndex].amount -= 1;
+    updatePizzaDisplay(blockIndex);
+  } else {
+    deletePizza(blockIndex);
+  }
 
-    renderBasket();
+  renderBasket();
 }
 
 function deletePizza(blockIndex) {
-    pizzas[blockIndex].amount = 0;  // reset amount
-    let pizzaElement = document.getElementById(`pizza-${blockIndex}`);
-    
-    if (pizzaElement) {
-        pizzaElement.remove();  // remove pizza block with index
-    }
+  pizzas[blockIndex].amount = 0; // reset amount
+  let pizzaElement = document.getElementById(`pizza-${blockIndex}`);
 
-    renderBasket();
+  if (pizzaElement) {
+    pizzaElement.remove(); // remove pizza block with index
+  }
+
+  renderBasket();
 }
 
 // calculation Sum
 function calcSum() {
-    let sum = 5;
+  let sum = 5;
 
-    for (let i = 0; i < pizzas.length; i++) {
-        sum += pizzas[i].amount * parseFloat(pizzas[i].price);
-    }
+  for (let i = 0; i < pizzas.length; i++) {
+    sum += pizzas[i].amount * parseFloat(pizzas[i].price);
+  }
 
-    return sum.toFixed(2);
+  return sum.toFixed(2);
 }
 
 function getSumTemplate(sum) {
-    return `<div class="basket-sum"><div><p>subtotal:</p><p>delivery:</p><h3>total:</h3></div>
-                                                <div><p>0.00 €</p><p>5.00 €</p><h3>${sum} €</h3></div></div>`;
+  return `<div class="basket-sum"><div><p>subtotal:</p><p>delivery:</p><h3>total:</h3></div>
+                                                <div><p>0.00 €</p><p>5.00 €</p><h3>${sum} €</h3></div></div>
+                                                <div class="order-section">
+                                                    <button onclick="resetBasket()" class="button-order">
+                                                        Order now
+                                                    </button>
+                                                    <div>
+                                                        <img id="pay" src="./images/icons/paypal-logo.png" alt="">
+                                                        <img id="pay" src="./images/icons/geld.png" alt="">
+                                                        <img id="pay" src="./images/icons/symbole.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>`;
 }
 
 function renderSum() {
-    let sum = calcSum();
-    let sumTemplate = getSumTemplate(sum);
+  let sum = calcSum();
+  let sumTemplate = getSumTemplate(sum);
 
-    docRef.innerHTML += sumTemplate;
+  docRef.innerHTML += sumTemplate;
 }
 
 function renderBasket() {
-    docRef.innerHTML = ""; 
+  docRef.innerHTML = "";
 
-    for (let i = 0; i < pizzas.length; i++) {
-        if (pizzas[i].amount > 0) {
-            docRef.innerHTML += getPizzaTemplate(i);  
-        }
+  for (let i = 0; i < pizzas.length; i++) {
+    if (pizzas[i].amount > 0) {
+      docRef.innerHTML += getPizzaTemplate(i);
     }
+  }
 
-    renderSum();
+  renderSum();
 }
-
 
 //reset all
 
 function returnFeedback() {
-    return ` 
+  return ` 
     <div class="notifications-container">
       <div class="success">
         <div class="flex">
@@ -124,25 +137,18 @@ function returnFeedback() {
     </div>`;
 }
 
-
-function resetBasket () {
-
-    let feedback = returnFeedback();
-    docRef.innerHTML = ""; 
-    docRef.innerHTML = feedback;
+function resetBasket() {
+  let feedback = returnFeedback();
+  docRef.innerHTML = "";
+  docRef.innerHTML = feedback;
 }
-
-
 
 /* Burger Overlay Toggle */
 
+function toggleOverlay(event) {
+  let overlayRef = document.getElementById(`side-track`);
 
-function toggleOverlay (event){
+  overlayRef.classList.toggle("d_none");
 
-    let overlayRef = document.getElementById(`side-track`);
-        
-    overlayRef.classList.toggle("d_none");
-
-    event.stopPropagation()
+  event.stopPropagation();
 }
-

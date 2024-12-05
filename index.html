@@ -29,7 +29,7 @@
       <button id="about-button" class="back" onclick="toggleOverlay()">Back</button>
 
       <div class="about-me-img">
-        <img src="./pictures/example.jpg" height="70%">
+        <img id="img-me" src="./pictures/example.jpg" height="70%">
       </div>
 
       <div class="about-me-information">
@@ -83,10 +83,8 @@
             <h5><span class="gradient-purple">2024.07 - now</span></h5>
           </div>
           <div class="inner column">
-            <h3>
-              Future Job <br>
-              Your Company? <img class="icon" src="./pictures/icons/job.png" alt="Future Job">
-            </h3>
+            <h3>Future Job</h3>
+            <h3 class="a_sim">Your Company?</h3>
             <h5>2025</h5>
           </div>
         </div>
@@ -186,7 +184,7 @@
             <path d="" />
           </svg>
           <header>
-            <img id="header-dot" src="./pictures/flaticon.png" height="25px">
+            
             <div class="header-links">
               <a class="text-none" href="#subject1"><div class="nav-button"><p class="text">Projects</p></div></a>
               <a class="text-none" href="#"><div onclick="toggleOverlay()" class="nav-button"><p class="text grey">About</p></div></a>
@@ -195,6 +193,7 @@
           </header>
           <div class="wallpaper-div">
             <div class="quad" id="quad">
+              <img id="header-dot" src="./pictures/flaticon.png" height="25px">
               <h4 class="Font-1">
                 <span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>e</span><span>n</span><span>d</span>
                 <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
@@ -220,7 +219,7 @@
           <h3>In this project i developed a Pokémon Trainer Registry. <br><br>I learned how APIs work and how to use them to integrate external data into my web applications. <br><br> I now understand the basics of HTTP requests and responses, including GET, POST, PUT, and DELETE methods. I became comfortable working with tools like the Fetch API to fetch data from open APIs, process it and display it on the frontend.<br>
           <br>https://pokeapi.co/
           <br><br>
-          <button id="about-button" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button>
+          <button id="about-button">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button>
           </h3>
         </div>
         </div>
@@ -240,7 +239,7 @@
           <h5><span class="gradient-purple">Solo project</span></h5><br>
           <h3>In this project i developed a Food Delivery Application just like Lieferando.<br><br>I implemented features like a functional shopping cart, dynamic item updates, and handled complex business logic such as calculating totals and managing inventory. This project sharpened my problem-solving abilities and gave me valuable experience in building real-world applications with JavaScript.<br>
           <br>
-          <a href="./05_Bestellapp Lieferando Edit/index.html" target="_blank"><button id="about-button" class="button-project" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button></a>
+          <a href="./Foody/index.html" target="_blank"><button id="about-button" class="button-project">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button></a>
         </div>
         </div>
       </div>
@@ -257,9 +256,10 @@
         </div>
         <div class="information-div">
           <h5><span class="gradient-purple">Solo project</span></h5><br>
-          <h3>Rock Mountain was among the very first projects I had the opportunity to create.<br><br>I rebuilt the Rock Mountain Band website, gaining a foundational understanding of HTML and CSS in the process.<br>
+          <h3>Rock Mountain was among the very first projects I had the opportunity to create.
+            I rebuilt the Rock Mountain Band website, gaining a foundational understanding of HTML and CSS in the process. <br><br> This experience not only honed my technical skills but also sparked my passion for web development, laying the groundwork for more complex and creative projects in the future.<br>
           <br>
-          <a href="./01_Band Website/index.html"><button id="about-button" class="button-project" onclick="toggleOverlay()">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button></a>
+          <a href="./Band/index.html" target="_blank"><button id="about-button" class="button-project">Open Project<img src="./pictures/link-open-icon.png" height="20px"></button></a>
         </div>
         </div>
       </div>
@@ -272,7 +272,6 @@
         <div class="Layout-Project">
           <div class="img-project-div p4">
             <p class="coming-soon">Coming soon..</p>
-            <div class="in-work"></div>
           </div>
         </div>
         <div class="information-div">
@@ -324,3 +323,12 @@
 <script defer src="./animations.js"></script>
 
 </html>
+
+<!--
+   _________                _________      .__                 ___.    
+  /   _____/ ____   _____  /   _____/ ____ |  |____  _  ______ \_ |__  
+  \_____  \_/ __ \ /     \ \_____  \_/ ___\|  |  \ \/ \/ |__  \ | __ \ 
+ /        \  ___/|  Y Y  \/        \  \___|   Y  \     / / __ \| \_\ \
+/_______  /\___  >__|_|  /_______  /\___  >___|  /\/\_/ (____  /___  /
+       \/     \/      \/        \/     \/     \/            \/    \/ 
+-->
