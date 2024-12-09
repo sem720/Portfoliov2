@@ -10,6 +10,12 @@
   animation-delay: 5.5s;
 }
 
+@media (max-width: 730px) {
+  #header-dot {
+    display: none;
+  }
+}
+
 /* About Button Header */
 
 .nav-button {
